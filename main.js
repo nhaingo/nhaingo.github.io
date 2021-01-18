@@ -1,2 +1,4 @@
-const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Helleo world';
+var greeting =  'Hello World';
+
+console.log(greeting);
+
