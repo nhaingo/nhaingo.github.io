@@ -1,6 +1,5 @@
 /* Defining Table
- INPUT:  
-Get the pound value to convert to kilogram in the input box – x 
+ INPUT: Get the pound value to convert to kilogram in the input box – x 
  
  OUTPUT: Display the converted value in kilograms and rounded to one decimal
 */ 
