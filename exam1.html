@@ -2,5 +2,37 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
+        <title>Exam2: Exercise4</title>
     </head>
+    <header>
+        <h1>Number of Stacks</h1>
+        <h2>Find the Number of Stacks to Make</h2>
+    </header>
+    <main>
+        <label>Enter the distance in kilometers:<input type="text" id="DistKm"></label>
+        <label><button type = "button" onclick="kmToMiles()">Convert to Miles</button></label>
+        <hr />
+        
+        <p><span id="convertToMiles"></span> miles</p>
+
+        <script>
+            /*Input: ask user to enter a distance value in kilometers
+            *Process: convert the distance into miles
+            *Output: display the result in miles
+            */
+           function kmToMiles() {
+               // Read the distance value from the user and convert it to a number.
+               let kilometers = parseFloat(document.getElementById('DistKm').value);
+               //Convert the distance in kilometers into miles unit.
+               let miles = Math.round((kilometers * 0.621371)*100)/100;
+               //Display distance in kilometers converted in miles unit
+               document.getElementById('convertToMiles').innerHTML = miles;
+           }
+            
+            
+            
+
+        </script>
+    </main>
+
 </html>
