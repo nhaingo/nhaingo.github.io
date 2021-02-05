@@ -1,7 +1,7 @@
 /* Defining Table
- INPUT:  Get two numbers from two different input boxes - x and y
- PROCESSING: Add the two numbers together store in sum
- OUTPUT: Display sum on the document
+ INPUT:  Have the user enter numbers in boxes 'number1'  and 'number2' for x and y
+ PROCESSING: Create a formula to get the sum of 'number1' and 'number2'
+ OUTPUT: Display the final result to show the sum of x and y
 */ 
 
 function addNumbers() {
