@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <title>Apply JavaScript example</title>
-    <script src="main.js" defer></script>
+    <head>
+        <meta charset="utf-8">
+        <title>Week6: Selection example 12</title>
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <main>
+        <h3>Ticket Price</h3>
+        <label>Enter age: <input type="text" id="age"></label>
+        <label>Enter the number of game attended: <input type="text" id="games"></label>
+        <label><button onclick="ticketPrice()">Price of ticket</button></label>
+        <hr>
+        <p><span id="ticketPrice"></span> Dollars</p>
+    </main>
+    <script>
+
+        function ticketPrice() {
+            var age = parseInt(document.getElementById('age').value);
+            var gamesAttended = parseInt(document.getElementById('games').value);
+            var price;
+            if (age < 18) {
+                if (gamesAttended < 6) price = 8.0;
+                else if (gamesAttended < 11) price = 6.0;
+                else price = 5.0;
+            }
+            else if (age < 55) {
+                if (gamesAttended < 11) price = 10.0;
+                else price = 8.0;
+            }
+            else {
+                if (gamesAttended < 11) price = 8.0;
+                else price = 6.0;
+            }
+        document.getElementById('ticketPrice').innerHTML = price;
+        }
     </script>
-  </head>
-  <body>
-    <button>Click me</button>
-  </body>
 </html>
