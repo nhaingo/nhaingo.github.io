@@ -16,9 +16,9 @@
     <script>
 
         function ticketPrice() {
-            var age = parseInt(document.getElementById('age').value);
-            var gamesAttended = parseInt(document.getElementById('games').value);
-            var price;
+            let age = parseInt(document.getElementById('age').value);
+            let gamesAttended = parseInt(document.getElementById('games').value);
+            let price;
             if (age < 18) {
                 if (gamesAttended < 6) price = 8.0;
                 else if (gamesAttended < 11) price = 6.0;
