@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W06 Simple Basic Calculation</title>
+        <link href="css/style2.css" rel="stylesheet" />
+        <script src="js/script2.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>CIT 160 W06 Simple Basic Calculation</h1>
+            <h2>Haingotiana Naharivelo</h2>
+        </header>
+        <main>
+            <h3>Basic Operation Practice</h3>
+            <label><input type="text" id="n1"></label>
+            <select name="operator" id="ope">
+                <option value="add">+</option>
+                <option value="sub">-</option>
+                <option value="mult">*</option>
+                <option value="div">/</option>
+            </select>
+            <label><input type="text" id="n2"></label>
+            <p>=</p>
+            <label><input type="text" id="res"></label>
+            <label><button onclick="compareResult()">Check your Answer</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+        &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </body>
+</html>

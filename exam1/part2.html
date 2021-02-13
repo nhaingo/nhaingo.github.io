@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Exam 1 Part-2</title>
+    </head>
+    <main>
+        <h2>Volume of a Cylinder</h2>
+        <label>Enter radius: <input type="text" id="radiusValue"></label>
+        <label>Enter heigth: <input type="text" id="heightValue"></label>
+        <label><button onclick="cylinderVolume()">Volume of the Cylinder</button></label>
+        <hr>
+        <p><span id="VolumeOfCylinder"></span> cm3</p>
+    <script>
+        function cylinderVolume() {
+
+            // Input: Convert the radius and height value entered by users into numbers
+        
+	        let Radius = parseFloat(document.getElementById('radiusValue').value);
+	        let Height = parseFloat(document.getElementById('heightValue').value);
+
+            //Processing: Write a formula to calculate the volume
+        
+            let Volume =  Math.round((Math.PI * Radius * Radius * Height)*1000)/1000;
+
+            // Display the result for the user to see
+
+        document.getElementById('VolumeOfCylinder').innerHTML = "the volume of this cylinder is" + " " + Volume;
+ }
+        
+    </script>
+    </main>
+</html>
