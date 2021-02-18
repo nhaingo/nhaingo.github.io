@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W07 Discount</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W07 Discount</h1>
+            
+        </header>
+        <main>
+            <h2>10% Special Discount </h2>
+            <label>Enter Subtotal ($): <input type="text" id="subtotal"></label>
+            <label><button onclick="subDiscount()">Total</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function subDiscount() {
+                let now = new Date();
+                let dayOfWeek = now.getDay();
+                let subTotal = parseFloat(document.getElementById("subtotal").value);
+                let total;
+                let message;
+                if (subTotal >= 50 && (dayOfWeek == 2 || dayOfWeek == 4)) {
+                    let subtDisc = subTotal - (subTotal* 0.10)
+                    total = ((subtDisc * 0.06) + subtDisc).toFixed(2);
+                    message = "Your total is $ " + total;
+                }else {
+                    total = ((subTotal * 0.06) + subTotal).toFixed(2);
+                    message = " Your total is $ " + total;
+                    }
+                document.getElementById("output").innerHTML = message;
+                }
+                
+            </script>
+        </body>
+</html>
