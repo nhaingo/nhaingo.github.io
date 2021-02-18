@@ -26,13 +26,13 @@
             let dayOfWeek = now.getDay();
             let christmas = new Date(now.getFullYear(), 11, 25)
             let newYear = new Date(now.getFullYear(), 0, 1);
-            let IndDay = new Date(now.getFullYear(), 5, 26);
+            let indDay = new Date(now.getFullYear(), 5, 26);
             let message;
             // processing: evaluate the conditions for the computer to display the right messages
             if (dayOfWeek == 0 || dayOfWeek == 6) {
                 message = "Sleep In! Today is a day Off!!";
             }
-            else if ((now == christmas || now == newYear) || now == IndDay) {
+            else if ((now == christmas || now == newYear) || now == indDay) {
                 message = "Sleep In! It's a holiday!";
             }   
             else {
