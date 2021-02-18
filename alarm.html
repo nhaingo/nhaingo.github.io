@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <meta charset = "utf-8">
+        <title>CIT 160 W07-Alarm</title>
+        <link href="css/style4.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <h1>CIT 160 W07-Alarm </h1>
+        </header>
+        <main>
+            <h2>Get Up!!--OR--Sleep In!!</h2>
+            <p><span id="todayDate"></span></p>
+            <hr>
+            <p><span id="output"></span></p>
+
+        </main>
+        <script>
+            //input: set variables to specify all needed entries
+            let now = new Date();
+            let dayOfWeek = now.getDay();
+            let christmas = new Date(now.getFullYear(), 11, 25)
+            let newYear = new Date(now.getFullYear(), 0, 1);
+            let IndDay = new Date(now.getFullYear(), 5, 26);
+            let message;
+            // processing: evaluate the conditions for the computer to display the right messages
+            if (dayOfWeek == 0 || dayOfWeek == 6) {
+                message = "Sleep In! Today is a day Off!!";
+            }
+            else if ((now == christmas || now == newYear) || now == IndDay) {
+                message = "Sleep In! It's a holiday!";
+            }   
+            else {
+                message = "Get Up! You need to be ready for work!";
+            }
+            //output: display the message that alert the user either it's a day off or a work day.
+            document.getElementById("todayDate").innerHTML = now;
+            document.getElementById("output").innerHTML = message;
+            
+           
+        </script>
+    </body>
+</html>

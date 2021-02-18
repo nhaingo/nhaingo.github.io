@@ -1,5 +1,5 @@
 function footWear() {
-    //Input program to assign vweather as variable 
+    //Input program to assign weather as variable 
    let weather = document.getElementById("wea").value;
    //Process: Use switch case to test user's choice
    let shoes;
