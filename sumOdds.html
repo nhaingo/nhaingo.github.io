@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W08 Sum up the Odd Values</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W08 Sum up the Odd Values</h1>
+            
+        </header>
+        <main>
+            
+            <label>Enter an Integer: <input type="text" id="integer"></label>
+            <label><button onclick="oddSumFunc()">Sum Up Odds</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function oddSumFunc() {
+                let integer = parseInt(document.getElementById("integer").value); // convert the user entry to integer.
+                let sum = 0; //give the value 0 to the variable "sum" as the starting point for the sum of all the odd numbers.
+                /*Using a for loop, set 1 as a starting point 
+                The variable number "integer" is the limit for this condition.
+                For each n element, increment it by 2 to get all the odd numbers. 
+                */
+                for (let n = 1; n <= integer; n += 2) {
+                        sum+=n; //sum all the values incremented by 2 inside the loop, which are all odd numbers
+                    
+                }
+                //display the sum of all odd integers inside the loop.
+                document.getElementById("output").innerHTML = "The sum of all odd numbers from 1 to " + integer + " is " + sum;
+            
+            }
+        </script>
+    </body>
+</html>
+       
