@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <title>CIT 160 W09 Times Table Using Repetition</title>
+        <meta charset = "utf-8">
+        <link href="css/style4.css" rel="stylesheet"/>
+    </head>
+    <body>
+       <header>
+           <h1>CIT 160 W09 Times Table Using Repetition</h1>
+           <h2>Five Times Table</h2>
+        </header>
+        <main>
+            <label><button onclick="fiveTimes()">Times 5</button></label>
+            <p id = "output"></p>
+            
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function fiveTimes() {
+                let timesNumber = 5
+                let times =  0;
+                let output = "";
+                for (let i = 1; i <= 12; i++) {
+                    times = i * timesNumber;
+                    output += timesNumber + " X " + i + "= "+ times + "<br>";
+                }
+                document.getElementById("output").innerHTML = output;
+
+            }
+           
+        </script>
+        </body>
+    </html>
