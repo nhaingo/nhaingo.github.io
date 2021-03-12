@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W09 Exam2 Question2</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W09 Exam2 Question2</h1>
+            
+        </header>
+        <main>
+            <p>Please enter two numbers:</p>
+            <input type="text" id="one" size="5"><br>
+            <input type="text" id="two" size="5">
+            <hr>
+            <button onclick="trueFalse()">True or False</button>
+            
+            <div id="output"></div>
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            /*input: get the inputs from users and convert to numbers
+            set the two input numbers as variable*/
+            let input1 = parseInt(document.getElementById("one").value);
+            let input2 = parseInt(document.getElementById("two").value);
+
+            
+            //process: the program evaluate the numbers to meet the conditions by using an if statement 
+            
+            function trueFalse() {
+                let input1 = parseInt(document.getElementById("one").value);
+                let input2 = parseInt(document.getElementById("two").value);
+
+                let evaluate;
+            //to fix : "2: OK. Can you combine into one compound conditions instead of two."
+                if ((input1 > 5 && input2 > 5) || ((input1 + input2)>20)) {
+                    evaluate = "True"
+                }
+                else {
+                    evaluate = "False"
+                }
+                document.getElementById("output").innerHTML = evaluate;
+
+            }
+
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W09 Exam2 Question3</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W09 Exam2 Question3</h1>
+            
+        </header>
+        <main>
+            <h2>List of Integers Evenly Divisible by the Divisor</h2>
+            <label>Start Integer: <input type="text" id="start"></label>
+            <label>End Integer: <input type="text" id="end"></label>
+            <label>Divisor: <input type="text" id="divisor"></label>
+            <hr>
+            <label><button onclick="func1()">Display</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            /* To correct: 3. you should declare i in the for loo
+            for (let i = start; i <= end; i++) {
+            you should not be writing to the document in every iteration.*/
+            function func1() {
+                //input: declare variables and convert user's inputs to integer
+                let output = " "
+                let start = parseInt(document.getElementById("start").value);
+                let end = parseInt(document.getElementById("end").value);
+                let divisor = parseInt(document.getElementById("divisor").value);
+                //process: select all the even numbers between the user's input to be looped by using a for block with an if condition
+                for (let i = start; i <= end; i++) {
+                    if(i % divisor == 0) {
+                    output += i + " ";
+                    }
+                //display the result for the user to see     
+            document.getElementById("output").innerHTML = output;
+                }
+            }
+        </script>
+        </body>
+    </html>

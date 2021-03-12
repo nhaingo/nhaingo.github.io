@@ -14,6 +14,8 @@
         <main>
             <h2>Tuesday and Thursday 10% Special Discount </h2>
             <label>Enter an Integer: <input type="text" id="integerBox"></label>
+            <label>Enter a limit: <input type="text" id="upperlimit"></label>
+            <label>Enter a divisor: <input type="text" id="divisor"></label>
             <label><button onclick="func1()">Total</button></label>
             <hr>
             <p><span id="outputDiv"></span></p>
@@ -58,7 +60,7 @@
                     d = c + " is correct!";
                     alert(d);
             }*/
-            function func1() {
+            /*function func1() {
                 let message =
                     "I'm thinking of a number between 1 and 100.\n" +
                     "Try to guess it!\n" +
@@ -78,17 +80,20 @@
                 } while (guess != answer);
                     message = guess + " is correct!";
                     alert(message);
-            }
-            /*function func1() {
+            }*/
+            function func1() {
                 var output = " ";
                 var skip = parseInt(document.getElementById('integerBox').value);
-                var i = 100;
+                var upperLimit = parseInt(document.getElementById('upperlimit').value);
+                var divisor = parseInt(document.getElementById("divisor").value);
+                var i = upperLimit;
                 while (i >= 0) {
+                    
                      output += i + "<br>";
                     i -= skip;
                 }
                 document.getElementById('outputDiv').innerHTML = output;
-            }*/
+            }
 
 
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W10 Functions with Parameters - WindChill</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W10 Functions with Parameters - WindChill</h1>
+            
+        </header>
+        <main>
+            <h2>Wind Chill Calculation </h2>
+            <label>Temperature (◦F): <input type="text" id="temperature"></label>
+            <label>Wind Speed (MPH ): <input type="text" id="windSpeed"></label>
+            <label><button onclick="doInputOutput()">Wind Chill</button></label>
+            <hr>
+            <p><span id="outputDiv"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function doInputOutput() {
+                let temperature = parseFloat(document.getElementById("temperature").value);
+                let windspeed = parseFloat(document.getElementById("windSpeed").value);
+                if (temperature < 50 && windspeed >= 3) {
+                    let windchill = windChill(temperature, windspeed)
+                    document.getElementById("outputDiv").innerHTML = windchill + " ◦F";
+                };    
+            }
+            function windChill(tempF, speed) {   
+                return (35.74 + 0.6215 * tempF - 35.75 * (speed ** 0.16) + 0.4275 * tempF * ( speed ** 0.16)).toFixed(1);
+            }
+        </script>
+    </body>
+</html>
