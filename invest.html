@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W11 More Functions with Parameters</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W11 More Functions with Parameters</h1>
+            
+        </header>
+        <main>
+            <h2>Investment Calculator</h2>
+            <label>Amount invested (principal): <input type="text" id="principalInvest"></label>
+            <label>Annual rate (example: .08): <input type="text" id="rate"></label>
+            <label>Number of years: <input type="text" id="numberYears"></label>
+            <label>Periods per years: <input type="text" id="periodsYears"></label>
+            <hr>
+            <label><button onclick="doFV()">Compute future value</button></label>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function doFV() {
+                let principal = parseFloat(document.getElementById("principalInvest").value);
+                let annualRate = parseFloat(document.getElementById("rate").value);
+                let years = parseInt(document.getElementById("numberYears").value);
+                let periodsPerYear = parseInt(document.getElementById("periodsYears").value);
+                let compute = computeFutureValue(principal, annualRate, years, periodsPerYear);
+                document.getElementById("output").innerHTML = compute
+            }
+            function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+                let a = principal;
+                let r = annualRate / periodsPerYear;
+                let n = years * periodsPerYear;
+                return (a * (1 + r)**n).toFixed(2);
+            }
+        </script>
+    </body>
+</html>

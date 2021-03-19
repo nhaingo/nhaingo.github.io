@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>CIT 160 W11 More Functions with Parameters</title>
+        <link href="css/style6.css" rel="stylesheet"/>
+    </head>
+    <body>
+       
+        <header>
+            <h1>CIT 160 W11 More Functions with Parameters</h1>
+            
+        </header>
+        <main>
+            <h2>Loan Calculator</h2>
+            <label>Amount borrowed (principal): <input type="text" id="principalBorrowed"></label>
+            <label>Annual interest rate (example: .065): <input type="text" id="annualInterestRate"></label>
+            <label>Number of years: <input type="text" id="numberYears"></label>
+            <label>Payments per years: <input type="text" id="paymentPerYears"></label>
+            <hr>
+            <label><button onclick="doPayment()">Compute payment</button></label>
+            <span id="output"></span></p>
+            <hr>
+            <label>Number of payments paid to date: <input type="text" id="nbPPaidtoDate"></label>
+            <hr>
+            <label><button onclick="doBalance()">Compute payoff amount</button></label>
+            <p><span id="output1"></span></p>
+            <hr>
+            
+            
+        </main>
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+        <script>
+            function doPayment() {
+                let principal = parseFloat(document.getElementById("principalBorrowed").value);
+                let annualRate = parseFloat(document.getElementById("annualInterestRate").value);
+                let years = parseInt(document.getElementById("numberYears").value);
+                let periodsPerYear = parseInt(document.getElementById("paymentPerYears").value);
+                let computePay = computePayment (principal, annualRate, years, periodsPerYear);
+                document.getElementById("output").innerHTML = computePay;
+            }
+            function doBalance() {
+                let principal = parseFloat(document.getElementById("principalBorrowed").value);
+                let annualRate = parseFloat(document.getElementById("annualInterestRate").value);
+                let years = parseInt(document.getElementById("numberYears").value);
+                let periodsPerYear = parseInt(document.getElementById("paymentPerYears").value);
+                let numberOfPaymentPaidToDate = parseInt(document.getElementById("nbPPaidtoDate").value);
+                let computeBal = computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate);
+                document.getElementById("output1").innerHTML = computeBal;
+            }
+            function computePayment(loan, annualRate, years, periodsPerYear) {
+                let a = loan
+                let r = annualRate / periodsPerYear;
+                let n = years * periodsPerYear;
+                return p = (a*r/(1 - (1 + r)**-n)).toFixed(2);   
+            }
+            function computeBalance(a, aR, y, pY, d) {
+                let r = aR / pY;
+                let n = y * pY;
+                return (a * (1 + r)**d - ((p * (((1 + r)**d) - 1 ))/r)).toFixed(2)
+
+            }
+
+        </script>
+    </body>
+</html>

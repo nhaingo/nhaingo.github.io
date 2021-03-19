@@ -1,0 +1,40 @@
+body {
+	text-align: center;
+}
+header,
+footer {
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+}
+
+footer {
+	font-size: 13px;
+	letter-spacing: 1.5pt;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+h2, #currentdate {
+    color: rgb(124, 7, 7);
+    font-size:40px
+}
+
+main {
+	margin: 10px auto;
+	border: 1px solid #999;
+	padding: 10px;
+	max-width: 500px;
+	background-color: rgb(179, 210, 245);
+	box-shadow: 0 0 30px;
+}
+
+
+label {
+	display: block;
+    margin: 3px;
+    text-align: left
+}
