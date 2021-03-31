@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Arrays - Week13</title>
+        <link href="css/style5.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+        <h1>Arrays - Week13</h1>   
+        <br>                              
+        <button type="Test" onclick="test()">Test Arrays</button>
+        <div id="output"></div>
+        <script>
+            /* Defining Table
+            * Input: no user input
+            * Processing: Test the countEvens and multiply functions by calling them.
+            * Output: The values returned from the countEvens and multiply functions.
+            */
+            function test() {
+                let list1 = [ 17, 8, 9, 5, 20 ];
+                let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+                // Test the countEvens function by calling it two times.
+                let count1 = countEvens(list1);
+                let count2 = countEvens(list2);
+
+                //Test the multiply function by calling it two times.
+                let mult1 = multiply(list1, 3);
+                let mult2 = multiply(list2, 4);
+
+                // Build a string to display to the user.
+                let output =
+                    count1 + '<br>' +
+                    count2 + '<br>' +
+                    mult1 + '<br>' +
+                    mult2;
+
+            // Display the output string for the user to see.
+            document.getElementById('output').innerHTML = output;
+            }
+            /*The function countEvens(list) calls the arrays list1 and list2.
+            Declare a variable that has an initial value of 0.
+            The for loop tests each element of the array to find each number that meets the condition.
+            Use the .lenght method to count the number of elements tested.
+            If an element meet the condition, the lenght value is added to the variable and incremented by one
+            The function returns the value of the variable*/
+            function countEvens(list) {	
+				let	evenInt = 0;
+				for (let i=0; i < list.length; i++) {
+					if (list[i] % 2 == 0) {
+						evenInt++;
+					}
+				}
+				return evenInt;
+            }
+            /*The function multiply(list, multiplier) calls the parameters of the function from the declared variables mult1 and mult2.
+            Declare and returns a variable that hold a new function to create a new array. The new function calls the list from its principal function block.
+            Use the .map method to create the new array elements, where a function can be performed on each element.
+            The function returns the values of the new array.
+            */
+            function multiply(list, multiplier) {
+                return products = list.map(newFunction);
+                function newFunction(list) {
+                    return list * multiplier;
+                }
+            }
+        </script>
+        <br>  
+        <footer>
+            &copy;2021 &bull; Haingotiana Naharivelo &bull; BYU-Idaho &bull; CIT 160
+        </footer>
+    </body>
+</html>

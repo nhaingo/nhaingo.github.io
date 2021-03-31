@@ -3,7 +3,7 @@ body {
 }
 header,
 footer {
-	background-color: #000;
+	background-color: rgba(134, 131, 131, 0.959);
 	color: #fff;
 	padding: 10px;
 }
